@@ -62,13 +62,13 @@ function App() {
           <div className="col-lg-6 col-sm-12 mb-5">
             <h3 className="text-info mb-4">Add User Here</h3>
             <form action="" onSubmit={handleAddFriend}>
-              <input className="mb-2 w-75" type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)} value={name}/>
+              <input className="mb-2 w-75" type="text" placeholder="Name" onChange={(e)=>setName(e.target.value)} value={name} required/>
               <br />
-              <input className="mb-2 w-75" type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} value={email}/>
+              <input className="mb-2 w-75" type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)} value={email} required/>
               <br />
-              <input className="mb-2 w-75" type="number" placeholder="Unique ID" onChange={(e)=>setId(e.target.value)} value={id}/>
+              <input className="mb-2 w-75" type="number" placeholder="Unique ID" onChange={(e)=>setId(e.target.value)} value={id} required/>
               <br />
-              <input className="mb-2 w-75" type="text" placeholder="Relation (Friend Name)" onChange={(e)=>setName2(e.target.value)} value={name2}/>
+              <input className="mb-2 w-75" type="text" placeholder="Relation (Friend Name)" onChange={(e)=>setName2(e.target.value)} value={name2} required/>
               <br />
               <button type="submit" className="btn btn-outline-info">Submit</button>
             </form>

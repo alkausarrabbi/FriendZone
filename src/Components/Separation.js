@@ -41,9 +41,9 @@ const Separation = ({friendsData}) => {
             <h1 className="mb-3">Find User Common <span className="text-info">Friend</span></h1>
              <form onSubmit={handleCompare}>
 
-              <input className="mb-2 w-75" type="text" placeholder="User Name" onChange={(e)=>setUser1(e.target.value)} value={user1}/> 
+              <input className="mb-2 w-75" type="text" placeholder="User Name" required onChange={(e)=>setUser1(e.target.value)} value={user1}/> 
               <br />
-              <input className="mb-2 w-75" type="text" placeholder="User Name" onChange={(e)=>setUser2(e.target.value)} value={user2}/>
+              <input className="mb-2 w-75" type="text" placeholder="User Name" required onChange={(e)=>setUser2(e.target.value)} value={user2}/>
               <br />
               <button type="submit" className="btn btn-outline-info">Submit</button>
             </form>
