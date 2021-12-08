@@ -9,15 +9,7 @@ const Separation = ({friendsData}) => {
     const [user1, setUser1]=useState("");
     const [user2, setUser2]=useState("");
 
-    // compare users to get mutual user 
-    const compare=()=>{
-        if (filter1[0].name2===filter2[0].name2){
-            setmutual(filter1[0].name2)
-        }
-        else{
-           return
-        }
-    }
+    
 
    
   
@@ -27,7 +19,24 @@ const Separation = ({friendsData}) => {
       const filter1=friendsData.filter(data=>data.name.toLowerCase() ===user1.toLowerCase());
       
       const filter2=friendsData.filter(data=>data.name.toLowerCase() ===user2.toLowerCase());
-     
+
+      const filter3=friendsData.filter(data=>data.name2.toLowerCase() ===user2.toLowerCase());
+
+
+
+      // compare users to get mutual user 
+    const compare=()=>{
+        if (filter1[0].name2===filter3[0].name || filter1[0].name2===filter2[0].name2){
+
+            setmutual(filter1[0].name2)
+        }
+    
+        else{
+           return
+        }
+    }
+
+
 
     //   handle compare action 
 
